@@ -8,7 +8,16 @@ const GalleryComponent = () => {
   useEffect(() => {
     // GSAP typing animation
     gsap.fromTo(
-      '#welcome-text', '#title',
+      '#welcome-text',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, delay: 1 }
+    );
+  }, []);
+
+  useEffect(() => {
+    // GSAP typing animation
+    gsap.fromTo(
+       '#title',
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1, delay: 1 }
     );
