@@ -1,10 +1,8 @@
-// src/components/AnimatedComponent.js
 'use client'
-// src/components/AnimatedCard.js
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const AnimatedCard = ({ children, duration = 1, delay = 0.2 }) => {
+const Animate = ({ children, duration = 1, delay = 0.2 }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -25,5 +23,5 @@ const AnimatedCard = ({ children, duration = 1, delay = 0.2 }) => {
   );
 };
 
-export default AnimatedCard;
+export default Animate;
 
