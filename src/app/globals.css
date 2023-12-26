@@ -6,6 +6,10 @@
 
 @import url("https://api.fontshare.com/v2/css?f[]=rowan@400&f[]=quilon@500&display=swap" rel="stylesheet");
 
+#title {
+  font-family: 'Quilon'
+}
+
 body {
   font-family: 'Rowan', serif;
   font-family: 'Quilon', sans-serif;
