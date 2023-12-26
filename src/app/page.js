@@ -8,7 +8,9 @@ export default function Home() {
     <main>
       <div>
           <App/>
-          <Animate/>
+          <Animate duration={1} delay={0.2}>
+        This is an animated card!
+      </Animate>
       </div>
     </main>
   )

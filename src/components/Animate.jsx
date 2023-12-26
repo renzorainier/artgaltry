@@ -1,18 +1,29 @@
 // src/components/AnimatedComponent.js
 'use client'
-import React, { useEffect } from 'react';
+// src/components/AnimatedCard.js
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const AnimatedComponent = () => {
+const AnimatedCard = ({ children, duration = 1, delay = 0.2 }) => {
+  const cardRef = useRef(null);
+
   useEffect(() => {
-    gsap.from('.box', { opacity: 0, duration: 1, y: 50 });
-  }, []);
+    const card = cardRef.current;
+
+    gsap.from(card, {
+      opacity: 0,
+      x: -50,
+      duration,
+      delay,
+    });
+  }, [duration, delay]);
 
   return (
-    <div className="box p-4 bg-blue-500 text-white">
-      This is an animated component!
+    <div ref={cardRef} className="box p-4 bg-blue-500 text-white">
+      {children}
     </div>
   );
 };
 
-export default AnimatedComponent;
+export default AnimatedCard;
+
