@@ -5,7 +5,6 @@ import gsap from 'gsap';
 
 const AnimatedComponent = () => {
   useEffect(() => {
-    // GSAP animations go here
     gsap.from('.box', { opacity: 0, duration: 1, y: 50 });
   }, []);
 
