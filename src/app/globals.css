@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@import url("https://api.fontshare.com/v2/css?f[]=rowan@400&f[]=quilon@500&display=swap" rel="stylesheet");
+
+body {
+  font-family: 'Rowan', serif;
+  font-family: 'Quilon', sans-serif;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
